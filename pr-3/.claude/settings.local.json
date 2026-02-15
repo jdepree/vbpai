@@ -7,7 +7,9 @@
       "Bash(vim:*)",
       "Bash(powershell -Command:*)",
       "Bash(where:*)",
-      "Bash(powershell -ExecutionPolicy Bypass -File \"c:\\\\workspace\\\\vbp-ai\\\\add-vim-to-path.ps1\")"
+      "Bash(powershell -ExecutionPolicy Bypass -File \"c:\\\\workspace\\\\vbp-ai\\\\add-vim-to-path.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"c:\\\\workspace\\\\vbp-ai\\\\install-poshgit.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File install-poshgit.ps1:*)"
     ]
   }
 }
