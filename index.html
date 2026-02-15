@@ -299,7 +299,14 @@
             border-color: var(--text-dark);
         }
 
-        .btn {
+        .btn-secondary:hover {
+            background: var(--text-dark);
+            color: var(--bg-cream);
+            transform: translateY(-2px);
+        }
+
+        /* Mission Section */
+        .mission {
             padding: 6rem 2rem;
             background: white;
             position: relative;
@@ -1156,11 +1163,11 @@
                 </div>
                 <div class="hero-stats-inline">
                     <div class="hero-stat-inline">
-                        <span class="hero-stat-inline-number">142,000+</span>
+                        <strong class="hero-stat-inline-number" aria-label="142,000 plus">142,000+</strong>
                         <span class="hero-stat-inline-label">Bikes Distributed</span>
                     </div>
                     <div class="hero-stat-inline">
-                        <span class="hero-stat-inline-number">23,500+</span>
+                        <strong class="hero-stat-inline-number" aria-label="23,500 plus">23,500+</strong>
                         <span class="hero-stat-inline-label">People Trained</span>
                     </div>
                 </div>
