@@ -2,6 +2,14 @@
 
 This is the website for the Village Bicycle Project - empowering communities through cycling.
 
+## Live Website
+
+The main branch is automatically deployed to GitHub Pages and is available at:
+
+**https://jdepree.github.io/vbpai/**
+
+Every time changes are merged to the main branch, the website is automatically updated within a few minutes.
+
 ## PR Preview Deployments
 
 This repository is configured to automatically deploy pull request previews to GitHub Pages. This allows non-technical team members to preview changes before they're merged to the main branch.
