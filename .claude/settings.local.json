@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(dir:*)",
-      "Bash(node enhance-photos.js:*)"
+      "Bash(node enhance-photos.js:*)",
+      "Bash(winget:*)",
+      "Bash(vim:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(where:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"c:\\\\workspace\\\\vbp-ai\\\\add-vim-to-path.ps1\")"
     ]
   }
 }
