@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Partnerships - Village Bicycle Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Epilogue:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #B7410E;
+            --primary-dark: #8B3A0F;
+            --primary-light: #CD5C2C;
+            --accent: #2D4A3E;
+            --accent-light: #4A7C59;
+            --secondary: #C4954A;
+            --secondary-light: #D4A85A;
+            --bg-cream: #F5EDE0;
+            --bg-light: #FBF7F0;
+            --text-dark: #2C2416;
+            --text-mid: #5C4D3C;
+            --gray: #C9BBA8;
+        }
+
+        body {
+            font-family: 'Epilogue', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-cream);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(250, 243, 224, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 2px solid var(--text-dark);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-family: 'Courier Prime', monospace;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: '';
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background: url('images/vbp_logo_icon.png') center/contain no-repeat;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .donate-btn {
+            background: var(--primary);
+            color: white !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 0;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid var(--primary);
+        }
+
+        .donate-btn:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('images/work_collection.webp') center/cover;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            color: white;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--text-dark);
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 550px;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: white;
+            color: var(--accent);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .hero-cta:hover {
+            background: var(--bg-cream);
+            transform: translateY(-2px);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: 'Courier Prime', monospace;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* Why Partner Section */
+        .why-partner {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-mid);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border: 2px solid var(--gray);
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--bg-cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .benefit-card p {
+            color: var(--text-mid);
+            font-size: 0.95rem;
+        }
+
+        /* Partnership Tiers */
+        .partnership-tiers {
+            padding: 5rem 2rem;
+            background: var(--bg-cream);
+        }
+
+        .tiers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tier-card {
+            background: white;
+            border: 2px solid var(--gray);
+            padding: 2.5rem 2rem;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .tier-card:hover {
+            border-color: var(--primary);
+        }
+
+        .tier-card.featured {
+            border-color: var(--primary);
+            transform: scale(1.02);
+        }
+
+        .tier-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .tier-name {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-mid);
+            margin-bottom: 0.5rem;
+        }
+
+        .tier-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .tier-amount span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-mid);
+        }
+
+        .tier-description {
+            color: var(--text-mid);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray);
+        }
+
+        .tier-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .tier-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            color: var(--text-mid);
+        }
+
+        .tier-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-light);
+            font-weight: bold;
+        }
+
+        .tier-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            background: var(--bg-cream);
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid var(--gray);
+            transition: all 0.3s;
+        }
+
+        .tier-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .tier-card.featured .tier-btn {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .tier-card.featured .tier-btn:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        /* Ways to Partner */
+        .ways-section {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .ways-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .way-card {
+            display: flex;
+            gap: 1.5rem;
+            background: white;
+            padding: 2rem;
+            border: 2px solid var(--gray);
+            transition: all 0.3s;
+        }
+
+        .way-card:hover {
+            border-color: var(--primary);
+        }
+
+        .way-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--bg-cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .way-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .way-content p {
+            color: var(--text-mid);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .way-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .way-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Current Partners */
+        .partners-section {
+            padding: 5rem 2rem;
+            background: var(--bg-cream);
+        }
+
+        .partners-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .partner-logo {
+            max-width: 150px;
+            max-height: 80px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+            filter: grayscale(100%);
+        }
+
+        .partner-logo:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
+        /* Testimonial */
+        .testimonial-section {
+            padding: 5rem 2rem;
+            background: var(--accent);
+            color: white;
+        }
+
+        .testimonial-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .testimonial-quote {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--secondary);
+        }
+
+        .testimonial-info {
+            text-align: left;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-title {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Form */
+        .contact-section {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border: 2px solid var(--gray);
+            margin-top: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--gray);
+            border-radius: 0;
+            font-size: 1rem;
+            font-family: 'Epilogue', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Epilogue', sans-serif;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--bg-cream);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-logo {
+            font-family: 'Courier Prime', monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-logo::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: url('images/vbp_logo_icon.png') center/contain no-repeat;
+            filter: brightness(0) invert(0.9);
+        }
+
+        .footer-about {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: block;
+            padding: 0.3rem 0;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .benefits-grid,
+            .tiers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tier-card.featured {
+                transform: none;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .benefits-grid,
+            .tiers-grid,
+            .ways-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .way-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .way-icon {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">VILLAGE BICYCLE PROJECT</a>
+            <ul class="nav-links">
+                <li><a href="index.html#mission">Mission</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="stories.html">Stories</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="donate-bike.html">Donate a Bike</a></li>
+                <li><a href="donate.html" class="donate-btn">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Corporate Partnerships</span>
+            <h1>Transform Communities With Us</h1>
+            <p>Partner with Village Bicycle Project to create lasting impact while achieving your corporate social responsibility goals.</p>
+            <a href="#contact" class="hero-cta">Become a Partner</a>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">142K+</div>
+                <div class="stat-label">Bicycles Distributed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Years of Impact</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Corporate Partners</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Countries Served</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Partner Section -->
+    <section class="why-partner">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Why Partner With Us</h2>
+                <p>Corporate partnership with Village Bicycle Project offers meaningful ways to engage employees, demonstrate values, and create measurable social impact.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Measurable Impact</h3>
+                    <p>Track your contribution with detailed reports showing exactly how many bicycles your support provided and the communities reached.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👥</div>
+                    <h3>Employee Engagement</h3>
+                    <p>Boost team morale with volunteer opportunities, bike collection drives, and hands-on events that bring your workforce together.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌍</div>
+                    <h3>Sustainability Focus</h3>
+                    <p>Align with environmental goals by promoting sustainable transportation and reducing carbon footprints in developing communities.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📣</div>
+                    <h3>Brand Visibility</h3>
+                    <p>Receive recognition across our website, social media, events, and annual reports reaching thousands of supporters.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Community Connection</h3>
+                    <p>Connect directly with the communities you're helping through stories, photos, and video updates from the field.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>CSR Reporting</h3>
+                    <p>Receive comprehensive documentation for ESG reporting, annual reports, and sustainability disclosures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Tiers -->
+    <section class="partnership-tiers">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Partnership Levels</h2>
+                <p>Choose a partnership level that aligns with your company's goals and budget. All partnerships include recognition and impact reporting.</p>
+            </div>
+            <div class="tiers-grid">
+                <div class="tier-card">
+                    <div class="tier-name">Bronze Partner</div>
+                    <div class="tier-amount">$5,000<span>/year</span></div>
+                    <p class="tier-description">Perfect for small businesses looking to make a meaningful impact.</p>
+                    <ul class="tier-features">
+                        <li>Logo on website partners page</li>
+                        <li>Social media recognition</li>
+                        <li>Annual impact report</li>
+                        <li>Certificate of partnership</li>
+                        <li>~50 bicycles funded</li>
+                    </ul>
+                    <a href="#contact" class="tier-btn">Get Started</a>
+                </div>
+                <div class="tier-card featured">
+                    <div class="tier-name">Silver Partner</div>
+                    <div class="tier-amount">$15,000<span>/year</span></div>
+                    <p class="tier-description">Ideal for mid-size companies seeking deeper engagement.</p>
+                    <ul class="tier-features">
+                        <li>All Bronze benefits</li>
+                        <li>Featured partner spotlight</li>
+                        <li>Quarterly impact updates</li>
+                        <li>Employee volunteer event</li>
+                        <li>Co-branded social content</li>
+                        <li>~150 bicycles funded</li>
+                    </ul>
+                    <a href="#contact" class="tier-btn">Get Started</a>
+                </div>
+                <div class="tier-card">
+                    <div class="tier-name">Gold Partner</div>
+                    <div class="tier-amount">$50,000<span>/year</span></div>
+                    <p class="tier-description">For organizations committed to transformational change.</p>
+                    <ul class="tier-features">
+                        <li>All Silver benefits</li>
+                        <li>Named school distribution</li>
+                        <li>Executive site visit opportunity</li>
+                        <li>Custom impact video</li>
+                        <li>Speaking opportunity at events</li>
+                        <li>~500 bicycles funded</li>
+                    </ul>
+                    <a href="#contact" class="tier-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ways to Partner -->
+    <section class="ways-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Ways to Partner</h2>
+                <p>Beyond financial contributions, there are many ways your organization can support our mission.</p>
+            </div>
+            <div class="ways-grid">
+                <div class="way-card">
+                    <div class="way-icon">🚲</div>
+                    <div class="way-content">
+                        <h3>Bike Collection Drives</h3>
+                        <p>Host a bike collection event at your office or facilities. We provide all materials and logistics support to make it easy for your employees to donate.</p>
+                        <a href="donate-bike.html" class="way-link">Learn more →</a>
+                    </div>
+                </div>
+                <div class="way-card">
+                    <div class="way-icon">💼</div>
+                    <div class="way-content">
+                        <h3>Bike-to-Work Program Donations</h3>
+                        <p>Donate end-of-lease bicycles from your corporate bike-to-work scheme. Give your fleet bikes a second life serving communities in West Africa.</p>
+                        <a href="donate-bike.html" class="way-link">Learn more →</a>
+                    </div>
+                </div>
+                <div class="way-card">
+                    <div class="way-icon">🎁</div>
+                    <div class="way-content">
+                        <h3>Matching Gift Programs</h3>
+                        <p>Double your employees' impact by matching their donations to Village Bicycle Project. We can help set up and promote matching campaigns.</p>
+                        <a href="donate.html" class="way-link">Learn more →</a>
+                    </div>
+                </div>
+                <div class="way-card">
+                    <div class="way-icon">🛠️</div>
+                    <div class="way-content">
+                        <h3>Skills-Based Volunteering</h3>
+                        <p>Contribute professional expertise in areas like marketing, logistics, finance, or technology to help us operate more effectively.</p>
+                        <a href="#contact" class="way-link">Get in touch →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Partners -->
+    <section class="partners-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Our Partners</h2>
+                <p>We're proud to work with organizations that share our commitment to sustainable transportation and community development.</p>
+            </div>
+            <div class="partners-logos">
+                <img src="images/re_cycle.png" alt="Re-Cycle" class="partner-logo">
+                <img src="images/bfw_logo.png" alt="Bikes for the World" class="partner-logo">
+                <img src="images/bikes_not_bombs.png" alt="Bikes Not Bombs" class="partner-logo">
+                <img src="images/working_bikes.png" alt="Working Bikes" class="partner-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial-section">
+        <div class="testimonial-container">
+            <p class="testimonial-quote">"Partnering with Village Bicycle Project has been one of the most rewarding CSR initiatives we've undertaken. Our employees love participating in bike collection events, and knowing exactly how many students we've helped reach school makes the impact tangible and meaningful."</p>
+            <div class="testimonial-author">
+                <div class="testimonial-avatar"></div>
+                <div class="testimonial-info">
+                    <div class="testimonial-name">Sarah Mitchell</div>
+                    <div class="testimonial-title">Director of Corporate Social Responsibility</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="section-header">
+                <h2>Start a Partnership</h2>
+                <p>Ready to make a difference? Fill out the form below and our partnerships team will be in touch within 2 business days.</p>
+            </div>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Work Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="company">Company Name *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Job Title *</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="interest">Partnership Interest *</label>
+                    <select id="interest" name="interest" required>
+                        <option value="">Select an option</option>
+                        <option value="bronze">Bronze Partnership ($5,000/year)</option>
+                        <option value="silver">Silver Partnership ($15,000/year)</option>
+                        <option value="gold">Gold Partnership ($50,000/year)</option>
+                        <option value="bike-collection">Bike Collection Drive</option>
+                        <option value="bike-scheme">Bike-to-Work Scheme Donation</option>
+                        <option value="matching">Matching Gift Program</option>
+                        <option value="volunteering">Skills-Based Volunteering</option>
+                        <option value="other">Other / Not Sure</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell us about your goals</label>
+                    <textarea id="message" name="message" placeholder="What are your CSR goals? How many employees do you have? Any specific interests or timeline?"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Partnership Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">VILLAGE BICYCLE PROJECT</div>
+                <p class="footer-about">Affordable and Sustainable Transportation for Africans</p>
+                <p class="footer-about">
+                    1915 11th Ave E<br>
+                    Seattle, WA 98102
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#mission">Our Mission</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Get Involved</h4>
+                <ul class="footer-links">
+                    <li><a href="volunteer.html">Volunteer Opportunities</a></li>
+                    <li><a href="donate-bike.html">Donate a Bike</a></li>
+                    <li><a href="partnerships.html">Corporate Partnerships</a></li>
+                    <li><a href="#">Newsletter Signup</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Village Bicycle Project. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/VillageBicycleProject/" target="_blank">FB</a>
+                <a href="#">IG</a>
+                <a href="#">TW</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
