@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(dir:*)",
-      "Bash(node enhance-photos.js:*)"
-    ]
-  }
-}
